@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audio Signal Processing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    label {
+      font-size: 18px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="file"] {
+      margin-bottom: 20px;
+    }
+    button[type="submit"] {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    #result {
+      display: none;
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Audio Signal Processing</h1>
+  <form id="audio-form" method="post" enctype="multipart/form-data">
+    <label for="audio_file">Select an audio file:</label>
+    <input type="file" name="audio_file" id="audio_file">
+    <button type="submit">Process Audio</button>
+  </form>
+  <div id="result"></div>
+  <script>
+    const form = document.getElementById('audio-form');
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const formData = new FormData(form);
+      fetch('/process_audio', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(result => {
+        console.log(result);
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerText = 'The audio file has been processed.';
+        resultDiv.style.display = 'block';
+      })
+      .catch(error => console.error(error));
+    });
+  </script>
+</body>
+</html>
+
