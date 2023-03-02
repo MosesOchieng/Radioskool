@@ -2,31 +2,33 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Simple registration form</title>
+  <title>School Login</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div class='container'>
-  
-  <div class='button-reg'>
-  <div class='login'>SingUp</div>
-  <div class='singin'>LogIn</div>
-  </div>
-  
-<form name='enter'>
-<input type='text' name='login' class='login-enter' placeholder='Enter yor Login' required></input>
-<input type='text' name='mail' class='mail-enter' placeholder='Enter yor e-mail address' required></input>
-<input type='password' name='password' class='password-enter' placeholder='Enter yor password' required></input>
-<input type='password' name='rapiat-password' class='second-password' placeholder='Repiat yor password' required></input>
-<input type='submit' name='submit-reg' class='submit-reg' value='Sing Up'></input>
-<input type='checkbox' name='conditions' class='check-conditions' required></input>
-<a href='#' class='agree'>I have read and agree to </br> the terms of registration</a>
-</form>
-
-<input type='submit' name='submit-enter' class='submit-enter' value='Log in' required></input>
-</div>
+<body>
+  <div class="container">
+    <div class="header-text">
+      <img class="header-text-logo" src="https://seeklogo.com/images/E/educational-people-logo-66BC945BD1-seeklogo.com.png" alt="logo">
+      <p class="header-text-description">School Login</p>
+    </div>
+    <form action=" ../Dash/index.html">
+      <input type="text" 
+             placeholder="Email"
+             name="email"
+             id="email"
+             autofocus>
+      <input type="password" 
+             name="password"
+             id="password" 
+             placeholder="Password"
+             required>
+      <button type="submit" name="login">Login</button>
+    </form>
+   </div>
+</body>
 <!-- partial -->
   <script  src="./script.js"></script>
 
