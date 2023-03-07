@@ -1,0 +1,198 @@
+.FM {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 480px;
+  background-color: #111111;
+  color: #FEFEFE;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.FM-favorites {
+  background-color: #333333;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+.FM-favorites ul {
+  padding: 13px 21px;
+  margin: 0;
+  list-style: none;
+}
+.FM-favorites ul li {
+  padding: 13px 0;
+  cursor: pointer;
+  display: flex;
+}
+.FM-favorites ul li strong {
+  flex: 1;
+}
+.FM-favorites ul li span {
+  text-align: right;
+  opacity: 0.5;
+}
+
+.FM-radio {
+  width: 70%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.FM-radio-current {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.FM-radio-current > div {
+  width: 100%;
+  text-align: center;
+}
+.FM-radio-current h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 5em;
+  margin: 0;
+  padding: 0;
+  text-shadow: 0px 0px 21px rgba(255, 255, 255, 0.5);
+}
+
+.FM-radio-stations {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 55px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 21px;
+  overflow: hidden;
+}
+
+.radio-stations-range {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.radio-stations-thumb {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background-color: red;
+  box-shadow: 0px 0px 13px 3px rgba(255, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.radio-stations-fader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.89), transparent 50%, rgba(0, 0, 0, 0.89));
+  z-index: 1;
+}
+
+/* Make Range Slider Invisible */
+input[type=range] {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+  /* Removes the blue border. */
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 55px;
+  width: 21px;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 55px;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  background: transparent;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: transparent;
+}
+
+/* End Making Range Slider Invisible */
+.radio-staions-slider {
+  position: absolute;
+  left: 50%;
+  transform: translateX(0px);
+  top: 0;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
+
+.radio-station {
+  position: relative;
+  float: left;
+  line-height: 89px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+}
+.radio-station span {
+  position: absolute;
+  transform: translate(-50%);
+}
+.radio-station:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 34px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+.radio-station:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 21px;
+  background: repeating-linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) 1px, transparent 1px, transparent 10px);
+}
+.radio-station:last-child {
+  width: auto;
+}
+.radio-station:last-child:after {
+  border: none;
+}
+.radio-station:last-child:before {
+  background: transparent;
+}

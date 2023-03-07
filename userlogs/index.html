@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>School Login</title>
+  <title>School Signup</title>
   <link rel="stylesheet" href="./style.css">
-
 </head>
-<body>
-<!-- partial:index.partial.html -->
 <body>
   <div class="container">
     <div class="header-text">
       <img class="header-text-logo" src="https://seeklogo.com/images/E/educational-people-logo-66BC945BD1-seeklogo.com.png" alt="logo">
-      <p class="header-text-description">School Login</p>
+      <p class="header-text-description">School Signup</p>
     </div>
-    <form action=" ../Dash/index.html">
+    <form action="">
       <input type="text" 
              placeholder="Email"
              name="email"
@@ -25,12 +22,13 @@
              id="password" 
              placeholder="Password"
              required>
-      <button type="submit" name="login">Login</button>
+      <button type="submit" name="signup" onclick="signup()">Signup</button>
     </form>
    </div>
-</body>
-<!-- partial -->
-  <script  src="./script.js"></script>
-
+   <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+   <script src="./script.js"></script>
+   <script src="./app.js"></script>
 </body>
 </html>
