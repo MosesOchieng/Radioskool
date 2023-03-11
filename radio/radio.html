@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radio Station</title>
+	<style>
+        body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+#header {
+	background-color: #d93b3b;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+}
+
+#header img {
+	height: 50px;
+	margin-right: 10px;
+}
+
+#main {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#player {
+	width: 50%;
+	margin: 20px;
+}
+
+#nowPlaying, #playlist {
+	width: 40%;
+	margin: 20px;
+}
+
+#nowPlaying h2, #playlist h2 {
+	border-bottom: 2px solid #d93b3b;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+#songTitle {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0;
+}
+
+#artist {
+	font-size: 18px;
+	margin: 0;
+}
+
+#songList {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#songList li {
+	margin-bottom: 10px;
+}
+
+#footer {
+	background-color: #ddd;
+	padding: 10px;
+	text-align: center;
+}
+
+    </style>
+</head>
+<body>
+	<div id="header">
+		<img src="logo.png" alt="Radio Station Logo">
+		<h1>Radio Station</h1>
+	</div>
+	<div id="main">
+		<div id="player">
+			<audio id="audioPlayer" controls></audio>
+		</div>
+		<div id="nowPlaying">
+			<h2>Now Playing</h2>
+			<p id="songTitle">Song Title</p>
+			<p id="artist">Artist</p>
+		</div>
+		<div id="playlist">
+			<h2>Playlist</h2>
+			<ol id="songList">
+				<li>Song 1</li>
+				<li>Song 2</li>
+				<li>Song 3</li>
+			</ol>
+		</div>
+	</div>
+	<div id="footer">
+		<p>&copy; 2023 Radio Station. All rights reserved.</p>
+	</div>
+	<script src="radio.js"></script>
+</body>
+</html>
