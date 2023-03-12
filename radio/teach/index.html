@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Start Class</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="msapplication-tap-highlight" content="no"/>
+<meta name="color-scheme" content="dark light"/>
+<meta name="theme-color" content="#111"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body data-theme="dark">
+  <form lang="en" spellcheck="false" class="form">
+    <legend class="legend">Start a Class by using any of the methods listed below and input the details required.
+        The classes are as listed below 
+
+    84.6 - 89.0  - Grade 6
+
+    90.0 - 94.0 - Grade 7
+
+    95.0 - 97.0 - Grade 8
+
+
+    </legend>
+    <fieldset class="fieldset">
+      <input type="text" id="msg-name" placeholder="Type the covered topic" accesskey="n" minlength="2" autocomplete="name" required/>
+      <label for="msg-name">Topic</label>
+    </fieldset>
+    <fieldset class="fieldset">
+      <input type="tel" id="" placeholder="class code 84.5" accesskey="e"  required/>
+      <label for="">Class Code</label>
+    </fieldset>
+    <fieldset class="fieldset">
+      <input type="tel" id="msg-phone" placeholder="Type your name" accesskey="t" minlength="13" autocomplete="tel" required/>
+      <label for="msg-phone">Tutor name</label>
+    </fieldset>
+    <fieldset class="fieldset message" spellcheck="true" 
+              data-no-support="Web Audio API not supported." 
+              data-no-permission="No permission to use audio device." 
+              data-no-file="No file recognized."
+              data-write="write" 
+              data-speak="speak" 
+              data-upload="upload" 
+              data-close="close" 
+              data-select="select file" 
+              data-drag="Select or drag file here" 
+              data-rec="record"  
+              data-record="Click mic to start recording" 
+              data-recording="recording..." 
+              data-error="error" 
+              data-error-type="%n file type not allowed." 
+              data-error-size="%n is larger than %s." 
+              data-audio="%n has recorded a message." 
+              data-file="%n has attached a file." 
+              data-play="play"  
+              data-pause="pause" 
+              data-pause="pause" 
+              data-playing="playing" 
+              data-rename="rename" 
+              data-confirm="confirm"  
+              data-confirm-delete="Delete this item permanently?"
+              data-ok="ok" 
+              data-delete="delete">
+      <textarea id="msg-text" placeholder="Type a message" accesskey="m" minlength="24" required></textarea>
+      <label for="msg-text">Message</label>
+    </fieldset>
+    <fieldset class="fieldset checkbox">
+      <input type="checkbox" id="msg-cc"/>
+      <label for="msg-cc">Send me a copy of this message.</label>
+    </fieldset>
+    <button type="reset">Reset</button>
+    <button type="submit">Send</button>
+    <div class="verify">
+      <input type="number" id="msg-verify" placeholder="2+7=" max="99" />
+      <label for="msg-verify">Verification question</label>
+    </div>
+  </form>
+  
+  <style>
+    /* Presentation only */
+    html{
+      height: 100%;
+      font-size: 1rem;
+    }
+    body{
+      height: 100%; width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: auto; padding:0;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      background-color: #fafafa;
+      -webkit-tap-highlight-color: rgba(0,0,0,0); 
+      user-select: none;
+      touch-action: none;
+    }
+    /* Dark mode*/
+    body[data-theme="dark"] {
+      color: #fafafa;
+      background-color: #111; 
+    }
+    /* Form layout */
+    .form { width: 90%!important; max-width: 584px; display: inline-block; }
+    .form > legend svg { fill: currentColor; width: 1.2em; height: 1.2em; vertical-align: text-top; }
+    /* Theme switch */
+    #theme { position: fixed; left: 50%; top:2em; transform: translateX(-50%); -webkit-transform: translateX(-50%); }
+    #theme label { text-align:center; padding: 0 0 3.5em 0; text-indent: -1.5em}
+  </style>
+  <script>
+    // Initialization
+    document.addEventListener('DOMContentLoaded', function(e){ 
+      // Example for German i18n
+      var i18n = {};
+      messageArea('.message');
+    })
+  </script>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

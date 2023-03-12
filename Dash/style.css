@@ -1,380 +1,290 @@
-html {
-  box-sizing: border-box;
+a:hover {
+  text-decoration: underline;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+/* Hero Unit ----------------------*/
+.hero-unit {
+  height: 640px;
+  background: url(https://static.pexels.com/photos/2884/building-vintage-bike-monument.jpg) no-repeat center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
-
-html{
-  height: 100%;
-  padding: 16px;
-  background-color: #252326;
-  background-image: url('http://christiannaths.com/code/admin-interface/dots.png'), url('http://christiannaths.com/code/admin-interface/route-66.jpg');
-  background-position: center center, center, center;
-  background-attachment: fixed, fixed;
-  background-size: auto, cover;
-}
-
-body{
-  height: 100%;
-  margin: 0;
-  font: 16px/24px normal "Open Sans", trebuchet, sans-serif;
-  font-weight: 100;
-  color: #616161;
-  color: black;
-  
-
-}
-
-h1, h2, h3, h4, h5{
-  margin-top: 0;
-  font-family: inherit;
-  font-weight: inherit;
-  font-size: 21px;
-}
-
-a{
-  text-decoration: none;
-  color: #fff;
-}
-
-.brick{
-  display: inline-block;
-  width: 100%;
-  padding: 16px;
-  margin-bottom: 8px;
-  margin-right: 8px;
-  background-color: #e7e7e7;
-  vertical-align: top;
-}
-
-.icon{
-  display: inline-block;
-  float: right;
-  width: 30px;
-  height: 30px;
-  font-size: 1.5em;
-  font-weight: 100;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.5;
-  text-align: center;
-
-}
-
-header > hgroup{
-  margin-bottom: 32px;
-  color: #fff;
-}
-
-header h1{
+.hero-unit h1,
+.hero-unit h2,
+.hero-unit h3,
+.hero-unit h4,
+.hero-unit h5,
+.hero-unit h6 {
+  margin-top: -0.5rem;
   margin-bottom: 0;
-  font-size: 28px;
+  color: white;
+}
+.hero-unit h1 {
+  font-weight: bold;
+}
+.hero-unit hgroup {
+  margin: 3rem 0;
+}
+.hero-unit .card-icon { /* front of card */
+  display: block;
+  margin: 0.5rem auto 0;
+  font-size: 2rem;
+  color: white;
+}
+.hero-unit .clients {
+  margin: 2rem auto;
+}
+.hero-unit .clients a {
+  color: white;
+}
+.clients .fa-stack-2x {
+  color: gray;
+}
+.clients:hover .fa-stack-2x {
+  color: #333333;
 }
 
-header a{
-  color: #a93447;
-}
-
-nav{
-  margin-bottom: 32px;
-}
-
-nav ul{
+/* Card design - front */
+.button.large {
   margin: 0;
+  padding: 3.25rem;
+}
+.button.large a {
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 100;
+  margin-top: 2rem;
+}
+
+/* Card design - back */
+.panel i {
+  font-size: 2rem;
+  display: block;
+  float: left;
+  width: 20%;
+  opacity: 0.5;
+}
+.panel a, 
+.panel p, 
+.panel small {
+  width: 80%;
+  float: right;
+}
+.panel a {
+  margin-bottom: 0.5rem;
+}
+.panel a:hover {
+  text-decoration: underline;
+}
+.panel small {
+  margin-top: -0.5rem;
+  font-style: italic;
+}
+
+/* Buttons Card Flipper 
+ * Source: https://cssdeck.com/labs/rxcleo5w
+ */
+.flip-cards {
+  float: left;
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+}
+
+.flip-cards li {
+  float: left;
+  width: 33.3%;
+  height: 180px;
+  position: relative;
   padding: 0;
-  list-style: none;
 }
 
-nav ul li{
-  display: inline;
+.flip-cards li:hover {
+  cursor: pointer;
 }
 
-nav ul li a.brick{
-  position: relative;
-  font-family: inherit;
-  font-weight: inherit;
-  color: #616161;
-  color: #252326;
-  line-height: 2;
-  background-color: #252326;
-  background-color: #F3F3F3;
-  background-color: #e7e7e7;
-  border-left: 3px solid #616161
+.flip-cards li:hover .card-front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transform: perspective(1000) rotateY(180deg);
+  -moz-transform: perspective(1000) rotateY(180deg);
+  -ms-transform: perspective(1000) rotateY(180deg);
+  -o-transform: perspective(1000) rotateY(180deg);
+  transform: perspective(1000) rotateY(180deg);
 }
 
-nav ul li a.brick .icon{
+.flip-cards li:hover .card-back {
+  z-index: 950;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform: perspective(1000) rotateY(0deg);
+  -moz-transform: perspective(1000) rotateY(0deg);
+  -ms-transform: perspective(1000) rotateY(0deg);
+  -o-transform: perspective(1000) rotateY(0deg);
+  transform: perspective(1000) rotateY(0deg);
+}
+
+.flip-cards .card-front,
+.flip-cards .card-back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.6s;
+  -moz-transition: -moz-transform 0.6s;
+  -o-transition: -o-transform 0.6s;
+  transition: transform 0.6s;
+  display: block;
+  height: 100%;
   position: absolute;
-  right: 0;
-  top: 0;
-  height: 64px;
-  width: 64px;
-  font-size: 2em;
-  color: #fff;
-  line-height: 2.25;
-  background: #616161;
-}
-
-nav ul li a.dashboard{
-  border-color: #B93861;
-}
-
-nav ul li a.dashboard .icon{
-  background-color: #B93861;
-}
-
-nav ul li a.pages{
-  border-color: #34ABD7;
-}
-
-nav ul li a.pages .icon{
-  background-color: #34ABD7;
-}
-
-nav ul li a.navigation{
-  border-color: #158A53;
-}
-
-nav ul li a.navigation .icon{
-  background-color: #158A53;
-}
-
-nav ul li a.users{
-  border-color: #D95235;
-}
-
-nav ul li a.users .icon{
-  background-color: #D95235;
-}
-
-nav ul li a.settings{
-  /*border-color: #34ABD7;*/
-}
-
-nav ul li a.settings .icon{
-  /*background-color: #34ABD7;*/
-}
-
-#content > header{
-  position: relative;
-  padding: 0px 72px 0px 0px;
-}
-
-#content .brick{
-  position: relative;
-}
-
-#content .brick .close{
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  color: #616161;
-}
-
-#content.pages .brick.title{
-  height: 120px;
-  border-left: 8px solid #34ABD7;
-}
-
-#content.pages .brick.identify{
-  display: none;
-}
-
-#content.pages .brick.save{
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 64px;
-  height: 54px;
-  min-height: 54px;
-  margin-right: 0;
-  color: #fff;
-  background: #158A53;
-}
-
-#content.pages .brick.close{
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 64px;
-  height: 54px;
-  min-height: 54px;
-  margin-right: 0;
-  color: #fff;
-  background: #616161;
-}
-
-#content.pages .brick.save .icon, #content.pages .brick.close .icon{
-  line-height: 1;
-}
-
-#content .brick.closed{
-  width: 120px;
-  height: 120px;
-}
-
-#content .brick.closed hgroup a{
-  display: none;
-}
-
-#content .brick.closed form{
-  display: none;
-}
-
-#content .brick form textarea{
   width: 100%;
-  max-width: 100%;
-  min-height: 200px;
-  padding: 16px;
-  border: 1px solid #666;
-    border-radius: 0px;
-  -moz-border-radius: 0px;
-  -webkit-border-radius: 0px;
 }
 
-#content .brick form input[type="text"]{
-  width: 100%;
-  padding: 8px 16px;
-  border: 1px solid #666;
-  font-size: 1.5em;
-  border-radius: 0px;
-  -moz-border-radius: 0px;
-  -webkit-border-radius: 0px;
+.flip-cards .card-front {
+  -webkit-transform: perspective(1000) rotateY(0);
+  -moz-transform: perspective(1000) rotateY(0);
+  -ms-transform: perspective(1000) rotateY(0);
+  -o-transform: perspective(1000) rotateY(0);
+  transform: perspective(1000) rotateY(0);
+  z-index: 900;
 }
 
-
-@media all and (max-width: 799px){
-  #content.pages .brick.close .text, #content.pages .brick.save .text{
-    display: none;
-  }
+.flip-cards .card-back {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  z-index: 800;
 }
 
-@media all and (min-width: 800px){
-  header > hgroup{
-    height: 120px;
-    color: #fff;
-  }
+/* Button Card Colors */
+.flip-cards .panel {
+  border: none;
+}
 
+.flip-cards .panel i,
+.flip-cards .panel p,
+.flip-cards .panel a,
+.flip-cards .panel small {
+  color: white;
+}
 
-  nav{
-    position: absolute;
-    width: 250px;
-  }
+/* First button color */
+.flip-cards li:first-child > .button {
+  background-color: rgba(40, 57, 77, 0.8);
+}
+.flip-cards li:first-child > .panel {
+  background-color: rgba(40, 57, 77, 1);
+}
 
+/* Second button color */
+.flip-cards li:nth-child(2) > .button {
+  background-color: rgba(109, 193, 202, 0.8);
+}
+.flip-cards li:nth-child(2) > .panel {
+  background-color: rgba(109, 193, 202, 1);
+}
 
+/* Third button color */
+.flip-cards li:nth-child(3) > .button {
+  background-color: rgba(211, 81, 45, 0.8);
+}
+.flip-cards li:nth-child(3) > .panel {
+  background-color: rgba(211, 81, 45, 1);
+}
 
-  #content{
-    min-height: 100%;
-    margin-left: 282px;
-    font-size: 0;
-  }
+/* Fourth button color */
+.flip-cards li:nth-child(4) > .button {
+  background-color: rgba(235, 167, 36, 0.8);
+}
+.flip-cards li:nth-child(4) > .panel {
+  background-color: rgba(235, 167, 36, 1);
+}
 
-  #content .brick{
-    min-height: 120px;
-    min-width: 120px;
-    background: #252326;
-    background: #a93447;
-    background: #F3F3F3;
-    background-color: #e7e7e7;
-    font-size: 16px;
-  }
+/* Fifth button color */
+.flip-cards li:nth-child(5) > .button {
+  background-color: rgba(75, 135, 150, 0.8);
+}
+.flip-cards li:nth-child(5) > .panel {
+  background-color: rgba(75, 135, 150, 1);
+}
 
-  #content .brick hgroup h2{
-    display: inline-block;
-    width: 80%;
-  }
+/* Sixth (last) button color */
+.flip-cards li:last-child > .button {
+  background-color: rgba(100, 66, 87, 0.8);
+}
+.flip-cards li:last-child > .panel {
+  background-color: rgba(100, 66, 87, 1);
+  color: white;
+}
 
-  #content .brick hgroup a{
-    float: right;
-    line-height: 1.13;
-  }
-
-
-  #content.pages .brick.controls{
-    position: relative;
-    padding-left: 136px;
-  }
-
-  #content > header{
-    position: relative;
-    padding: 0px 128px;
-  }
-
-  #content.pages .brick.identify{
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #fff;
-    background: #34ABD7;
-    width: 120px;
-  }
-
-  #content.pages .brick.identify .icon{
-    display: block;
-    height: 60px;
-    width: 60px;
-    float: none;
-    margin: 0 auto;
-    font-size: 5em;
-    color: #fff;
-    line-height: 1.25;
-  }
-
-  #content.pages .brick.title{
-    border-left: none;
-  }
-
-  #content.pages .brick.save{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin-right: 0;
-    color: #fff;
-    background: #158A53;
-    height: 56px;
-    min-height: 56px;
-    width: 120px;
-  }
-
-  #content.pages .brick.close{
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 120px;
-    height: 56px;
-    min-height: 56px;
-    margin-right: 0;
-    color: #fff;
-    background: #616161;
-  }
-
-  #content.pages .brick.save .icon, #content.pages .brick.close .icon{
-    line-height: 1;
-  }
-
-  #content.pages .brick.controls .icon{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 120px;
-    width: 120px;
-    background: #34ABD7;
-    color: #fff;
-    font-size: 5em;
-  }
-
-  input[type='submit'][value='%']{
-    position: absolute;
-    background: #158A53;
-    border: none;
-    left: 0px;
-    bottom: 0px;
-    width: 60px;
-    height: 60px;
-    font-family: "ModernPictogramsNormal";
-    font-weight: 100;
-    font-size: 2em;
-    color: #fff;
-  }
+/*
+ * RESPONSIVENESS -------------------------------------------------
+ */
+@media only screen and ( max-width: 40em ) {
+	.hero-unit {
+		height: 800px;
+	}
+	.flip-cards li {
+		width: 50%;
+		/*height: 160px;*/
+	}
+}
+@media only screen and ( max-width: 30em ) {
+	.hero-unit h1 {
+		font-size: 1.75rem;
+	}
+	.hero-unit h3 {
+		font-size: 1.125rem;
+	}
+}
+@media only screen and ( max-width: 25em ) {
+	.hero-unit {
+		height: 920px;
+	}
+	.hero-unit hgroup {
+		margin: 2rem 0;
+	}
+	.hero-unit h1 {
+		font-size: 1.35rem;
+		padding-bottom: 0.25rem;
+	}
+	.hero-unit h3 {
+		font-size: 0.85rem;
+	}
+	.hero-unit .card-icon {
+		font-size: 1.35rem;
+	}
+	.hero-unit .card-back .card-icon {
+		font-size: 2rem;
+		margin: 0;
+		padding: 5px 0 20px 5px;
+	}
+	.flip-cards li {
+		width: 100%;
+		font-size: 1.35rem;
+		height: 120px;
+	}
+	.flip-cards .panel p {
+		display: none;	
+	}
+	.flip-cards .panel small {
+		margin: 0;
+	}
+	.button.large {
+		padding: 2rem;
+	}
+	.button.large a {
+		font-size: 1.35rem;
+	}
 }
