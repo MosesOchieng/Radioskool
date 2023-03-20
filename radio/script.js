@@ -1,5 +1,5 @@
 var lstsis =
-  "Students Register - EMP|Materiais|Consulta Cadastro MEGA |Catalogo de Itens em Geral|Materiais Geral|Uso Comum|Bolsa de Estudos |Solicitação/Renovação|Cesta Básica|Confraternização|Dicionário Aurélio|Documentos Normativos|Pesquisa de Clima Organizacional";
+  "Students Register - Lomayan School|Listening students|Class Schedule |Play Class List|Opitons Record List|Grade 7 |Grade 8|Grade 9|Junior Secondary";
 
 var lstsisurl = "#|#|#|#|#|#|#|#|#|#|#|#|#";
 
