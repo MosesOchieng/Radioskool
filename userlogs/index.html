@@ -9,20 +9,25 @@
   <div class="container">
     <div class="header-text">
       <img class="header-text-logo" src="https://seeklogo.com/images/E/educational-people-logo-66BC945BD1-seeklogo.com.png" alt="logo">
-      <p class="header-text-description">School Signup</p>
+      <p class="header-text-description">School Login</p>
     </div>
-    <form action=" ../Dash/index.html">
+    <form action=" ../Dash/index.html" id="name-form">
       <input type="text"
              placeholder="Email"
              name="email"
              id="email"
+             autofocus>
+             <input type="text"
+             placeholder="School name"
+             name="username"
+             id="name-input"
              autofocus>
       <input type="password"
              name="password"
              id="password"
              placeholder="Password"
              required>
-      <button type="submit" name="signup" onclick="signup()">Signup</button>
+      <button type="submit" name="signup" onclick="signup()">Login</button>
     </form>
    </div>
    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
@@ -30,5 +35,16 @@
    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
    <script src="./script.js"></script>
    <script src="./app.js"></script>
+   <script>
+    const form = document.getElementById("name-form");
+  const input = document.getElementById("name-input");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    localStorage.setItem("name", input.value);
+    window.location.href = " ../Dash/index.html";
+  });
+
+</script>
 </body>
 </html>
